@@ -1,10 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
+import styles from './css/App.module.css';
 
 function App() {
   return (
     <div className="App">
-      VELOG
+      <div className={styles.header}>
+        velog
+      </div>
     </div>
   );
 }
