@@ -1,8 +1,12 @@
+import Layout from "./shared/Layout";
+
 function App() {
   return (
-    <div>
-
-    </div>
+    <Layout>
+      <div>
+        컨텐츠
+      </div>
+    </Layout>
   );
 }
 
