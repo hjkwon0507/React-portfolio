@@ -1,8 +1,73 @@
-.container{
-  border: 1px solid red;
+.container {
+  /* border: 1px solid red; */
   display: flex;
   align-items: center;
-  justify-content: center  ;
+  justify-content: space-between;
   width: 100%;
   height: 64px;
+}
+.logo {
+  /* border: 1px solid fuchsia; */
+  font-family: 'Fira Mono', monospace;
+  font-size: 1.3125rem;
+  font-weight: bold;
+}
+.buttons {
+  display: flex;
+  align-items: center;
+}
+.modeBtn {
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-right: 0.25rem;
+}
+.modeIcon {
+  width: 24px;
+  height: 24px;
+}
+.searchBtn {
+  width: 2.5rem;
+  height: 2.5rem;
+  outline: none;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+.searchIcon {
+  width: 1.125rem;
+  height: 1.125rem;
+}
+.createBtn {
+  height: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-right: 1.25rem;
+  font-size: 1rem;
+  border-radius: 1rem;
+  font-weight: bold;
+  background: #F8F9FA;
+  border: 1px solid #212529;
+  color: #212529;
+  transition: all 0.125s ease-in 0s;
+}
+.profileBox{
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+}
+.profile {
+  height: 2.5rem;
+  width: 2.5rem;
+  box-shadow: rgb(0 0 0 / 9%) 0px 0px 8px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: all 0.125s ease-in 0s;
+}
+.down {
+  width: 1em;
+  height: 1em;
+  margin-left: 0.25rem;
+  color: #868E96;
+  transition: all 0.125s ease-in 0s;
+  margin-right: -0.4375rem;
 }

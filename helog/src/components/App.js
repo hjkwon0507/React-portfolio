@@ -1,11 +1,12 @@
+import './App.css';
+import Menu from "./Menu";
 import Layout from "./shared/Layout";
 
 function App() {
   return (
     <Layout>
-      <div>
-        컨텐츠
-      </div>
+      <Menu />
+      <div>컨텐츠</div>
     </Layout>
   );
 }
