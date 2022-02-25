@@ -18,9 +18,7 @@ function Header({isLoggedIn}){
         {
           isLoggedIn? (
             <>
-              <button className={styles.createBtn}>
-                새 글 작성
-              </button>
+              <button className={styles.createBtn}>새 글 작성</button>
               <div className={styles.profileBox}>
                 <img className={styles.profile} />
                 <MdOutlineArrowDropDown className={styles.down} />
