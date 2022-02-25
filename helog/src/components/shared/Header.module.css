@@ -37,6 +37,17 @@
   width: 1.125rem;
   height: 1.125rem;
 }
+.loginBtn {
+  height: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 1rem;
+  border-radius: 1rem;
+  font-weight: bold;
+  background: #212529;
+  color: #FFFFFF;
+  transition: all 0.125s ease-in 0s;
+}
 .createBtn {
   height: 2rem;
   padding-left: 1rem;

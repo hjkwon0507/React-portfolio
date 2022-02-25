@@ -14,13 +14,14 @@ function Header(){
         <a className={styles.searchBtn}>
           <FiSearch className={styles.searchIcon} />
         </a>
-        <button className={styles.createBtn}>
+        <button className={styles.loginBtn}>로그인</button>
+        {/* <button className={styles.createBtn}>
           새 글 작성
         </button>
         <div className={styles.profileBox}>
           <img className={styles.profile} />
           <MdOutlineArrowDropDown className={styles.down} />
-        </div>
+        </div> */}
       </div>
     </div>
   )
