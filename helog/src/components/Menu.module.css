@@ -19,6 +19,14 @@
   color: #868E96;
   font-size: 1.125rem;
 }
+.active {
+  width: 7rem;
+  height: 3rem;
+  color: #868E96;
+  font-size: 1.125rem;
+  color: #212529;
+  font-weight: bold;
+}
 .icon {
   font-size: 1.5rem;
   margin-right: 0.5rem;
