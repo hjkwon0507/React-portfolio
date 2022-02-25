@@ -4,7 +4,8 @@ import { BsFillSunFill } from 'react-icons/bs';
 import { FiSearch } from 'react-icons/fi';
 import { MdOutlineArrowDropDown } from 'react-icons/md'
 
-function Header({isLoggedIn}){
+function Header({modal, setModal, isLoggedIn}){
+
   return(
     <div className={styles.container}>
       <Link to="/" className={styles.logo}>Helog</Link>
@@ -25,7 +26,7 @@ function Header({isLoggedIn}){
               </div>
             </>
           ):
-          <button className={styles.loginBtn}>로그인</button>
+          <button className={styles.loginBtn} onClick={()=>{setModal(true)}}>로그인</button>
         }
       </div>
     </div>

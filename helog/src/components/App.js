@@ -12,6 +12,7 @@ import { Link, Route, Switch } from 'react-router-dom';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(authService.currentUser);
+  
   return (
     <Layout isLoggedIn={isLoggedIn}>
       <Route exact path="/" component={Home}></Route>
