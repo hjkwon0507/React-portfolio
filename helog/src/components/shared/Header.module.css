@@ -11,6 +11,7 @@
   font-family: 'Fira Mono', monospace;
   font-size: 1.3125rem;
   font-weight: bold;
+  color: #212529;
 }
 .buttons {
   display: flex;
@@ -32,6 +33,7 @@
   outline: none;
   border-radius: 50%;
   margin-right: 0.5rem;
+  color: #212529;
 }
 .searchIcon {
   width: 1.125rem;

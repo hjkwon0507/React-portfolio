@@ -3,7 +3,7 @@ import './App.css';
 import Layout from "./shared/Layout";
 import Home from '../pages/Home';
 import Search from '../pages/Search';
-import Setting from '../pages/Setting';
+import Profile from '../pages/Profile';
 import Detail from '../pages/Detail';
 
 
@@ -15,7 +15,7 @@ function App() {
     <Layout isLoggedIn={isLoggedIn}>
       <Route exact path="/" component={Home}></Route>
       <Route path="/search" component={Search}></Route>
-      <Route path="/setting" component={Setting}></Route>
+      <Route path="/setting" component={Profile}></Route>
       <Route path="/detail" component={Detail}></Route>
     </Layout>
   );

@@ -1,4 +1,5 @@
 import styles from './Header.module.css';
+import { Link } from 'react-router-dom';
 import { BsFillSunFill } from 'react-icons/bs';
 import { FiSearch } from 'react-icons/fi';
 import { MdOutlineArrowDropDown } from 'react-icons/md'
@@ -6,14 +7,14 @@ import { MdOutlineArrowDropDown } from 'react-icons/md'
 function Header({isLoggedIn}){
   return(
     <div className={styles.container}>
-      <a className={styles.logo}>Velog</a>
+      <Link to="/" className={styles.logo}>Helog</Link>
       <div className={styles.buttons}>
         <button className={styles.modeBtn}>
           <BsFillSunFill className={styles.modeIcon} />
         </button>
-        <a className={styles.searchBtn}>
+        <Link to="/search" className={styles.searchBtn}>
           <FiSearch className={styles.searchIcon} />
-        </a>
+        </Link>
         {
           isLoggedIn? (
             <>
