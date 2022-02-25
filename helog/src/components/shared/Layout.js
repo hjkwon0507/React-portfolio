@@ -1,10 +1,10 @@
 import styles from './Layout.module.css';
 import Header from './Header';
 
-function Layout({children}){
+function Layout({isLoggedIn, children}){
   return(
     <div className={styles.container}>
-      <Header />
+      <Header isLoggedIn={isLoggedIn} />
       <div className={styles.contents}>{children}</div>
     </div>
   )
