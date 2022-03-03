@@ -26,3 +26,19 @@
   box-shadow: rgb(0 0 0 / 9%) 0px 2px 12px 0px;
   display: flex;
 }
+.gray-block {
+  width: 216px;
+  background: var(--bg-element2);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.white-block {
+  flex: 1 1 0%;
+  background: var(--bg-page2);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
