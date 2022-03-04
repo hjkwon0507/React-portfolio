@@ -8,7 +8,7 @@ function Layout({isLoggedIn, children}){
   return(
     <>
       {
-        modal
+        modal === true
         ? <Auth/>
         : null
       }
