@@ -1,4 +1,5 @@
 import styles from "./Auth.module.css";
+import { AiOutlineClose } from 'react-icons/ai'
 
 function Auth(){
   return(
@@ -10,10 +11,11 @@ function Auth(){
           </div>
           <div className={styles.whiteBlock}>
             <div className={styles.exitWrapper}>
-
+              <AiOutlineClose />
             </div>
             <div className={styles.blockContent}>
               <div className={styles.content}>
+                <h2 className={styles.title}>로그인</h2>
                 <form className={styles.upperWrapper}>
                   <input type="text" placeholder="Email" required />
                   <input type="password" placeholder="Password" required />
