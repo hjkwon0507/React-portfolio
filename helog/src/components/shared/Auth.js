@@ -37,7 +37,7 @@ function Auth({modal, setModal}){
                 >
                   <input 
                     name="email"
-                    type="text" 
+                    type="email" 
                     placeholder="Email" 
                     required
                     value={email} 
