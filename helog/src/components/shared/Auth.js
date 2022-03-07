@@ -1,7 +1,7 @@
 import styles from "./Auth.module.css";
 import { AiOutlineClose } from 'react-icons/ai'
 
-function Auth(){
+function Auth({modal, setModal}){
   return(
     <div className={styles.container}>
       <div className={styles.auth}>
@@ -11,7 +11,7 @@ function Auth(){
           </div>
           <div className={styles.whiteBlock}>
             <div className={styles.exitWrapper}>
-              <AiOutlineClose />
+              <AiOutlineClose className={styles.icon} onClick={()=>{setModal(false);}} />
             </div>
             <div className={styles.blockContent}>
               <div className={styles.content}>

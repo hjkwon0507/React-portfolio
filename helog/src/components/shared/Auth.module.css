@@ -49,3 +49,13 @@
   color: #868E96;
   margin-bottom: 2.25rem;
 }
+.exitWrapper {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1.5rem;
+  color: #868E96;
+  margin-bottom: 2.25rem;
+}
+.icon {
+  cursor: pointer;
+}

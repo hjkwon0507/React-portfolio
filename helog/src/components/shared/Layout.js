@@ -9,7 +9,7 @@ function Layout({isLoggedIn, children}){
     <>
       {
         modal === true
-        ? <Auth/>
+        ? <Auth modal={modal} setModal={setModal} />
         : null
       }
       <div className={styles.container}>
