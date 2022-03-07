@@ -1,7 +1,22 @@
 import styles from "./Auth.module.css";
 import { AiOutlineClose } from 'react-icons/ai'
+import { useState } from "react";
 
 function Auth({modal, setModal}){
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const onChange = (event) => {
+    const {target: {name, value}} = event;
+    if(name === "email"){
+      setEmail(value);
+    } else if(name === "password"){
+      setPassword(value);
+    }
+  };
+  const onSubmit = (event) => {
+    event.preventDefault();
+  };
+
   return(
     <div className={styles.container}>
       <div className={styles.auth}>
@@ -16,9 +31,26 @@ function Auth({modal, setModal}){
             <div className={styles.blockContent}>
               <div className={styles.content}>
                 <h2 className={styles.title}>로그인</h2>
-                <form className={styles.upperWrapper}>
-                  <input type="text" placeholder="Email" required />
-                  <input type="password" placeholder="Password" required />
+                <form 
+                  onSubmit={onSubmit}
+                  className={styles.upperWrapper}
+                >
+                  <input 
+                    name="email"
+                    type="text" 
+                    placeholder="Email" 
+                    required
+                    value={email} 
+                    onChange={onChange}
+                  />
+                  <input 
+                    name="password"
+                    type="password" 
+                    placeholder="Password" 
+                    required
+                    value={password} 
+                    onChange={onChange}
+                  />
                   <input type="submit" value="Log In" />
                 </form>
                 <div>
