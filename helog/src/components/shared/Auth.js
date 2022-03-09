@@ -1,20 +1,41 @@
 import styles from "./Auth.module.css";
 import { AiOutlineClose } from 'react-icons/ai'
 import { useState } from "react";
+import { authService } from "../../fbase";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
+
 
 function Auth({modal, setModal}){
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [newAccount, setNewAccount] = useState(true);
+  const [error, setError] = useState("");
+
   const onChange = (event) => {
     const {target: {name, value}} = event;
+
     if(name === "email"){
       setEmail(value);
     } else if(name === "password"){
       setPassword(value);
     }
   };
-  const onSubmit = (event) => {
+  
+  const onSubmit = async(event) => {
     event.preventDefault();
+    try {
+      if(newAccount){
+        // create account
+        data = await createUserWithEmailAndPassword(authService, email, password);
+      } else {
+        // log in
+        data = await signInWithEmailAndPassword(authService, email, password);
+      }
+      console.log(data);
+      alert("회원가입이 완료되었습니다.")
+    } catch(error){
+      setError(error.message);
+    }
   };
 
   return(
@@ -30,7 +51,7 @@ function Auth({modal, setModal}){
             </div>
             <div className={styles.blockContent}>
               <div className={styles.content}>
-                <h2 className={styles.title}>로그인</h2>
+                <h2 className={styles.title}>{newAccount ? "회원가입" : "로그인"}</h2>
                 <form 
                   onSubmit={onSubmit}
                   className={styles.upperWrapper}
@@ -51,7 +72,10 @@ function Auth({modal, setModal}){
                     value={password} 
                     onChange={onChange}
                   />
-                  <input type="submit" value="Log In" />
+                  <input type="submit"
+                    value={newAccount ? "회원가입" : "로그인"}
+                    onSubmit={onSubmit}
+                  />
                 </form>
                 <div>
                   <button>Continue with Google</button>
