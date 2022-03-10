@@ -5,7 +5,6 @@ import { FiSearch } from 'react-icons/fi';
 import { MdOutlineArrowDropDown } from 'react-icons/md'
 
 function Header({modal, setModal, isLoggedIn}){
-
   return(
     <div className={styles.container}>
       <Link to="/" className={styles.logo}>Helog</Link>
