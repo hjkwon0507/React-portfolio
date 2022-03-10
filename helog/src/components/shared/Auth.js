@@ -2,7 +2,13 @@ import styles from "./Auth.module.css";
 import { AiOutlineClose } from 'react-icons/ai'
 import { useState } from "react";
 import { authService } from "../../fbase";
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  GithubAuthProvider,
+  GoogleAuthProvider,
+  signInWithPopup
+} from 'firebase/auth';
 
 
 function Auth({modal, setModal}){
@@ -32,9 +38,29 @@ function Auth({modal, setModal}){
         data = await signInWithEmailAndPassword(authService, email, password);
       }
       console.log(data);
-      alert("회원가입이 완료되었습니다.")
     } catch(error){
       setError(error.message);
+    }
+  };
+
+  // const toggleAccount = () => setNewAccount((prev) => !prev);
+
+  const onSocialClick = async(event) => {
+    const {
+      target: { name }
+    } = event;
+    let provider;
+
+    try {
+      if(name === "google"){
+        provider = new GoogleAuthProvider();
+      } else if(name === "github"){
+        provider = new GithubAuthProvider();
+      }
+      const data = await signInWithPopup(authService, provider);
+      console.log(data);
+    } catch(error){
+      console.log(error);
     }
   };
 
@@ -78,8 +104,8 @@ function Auth({modal, setModal}){
                   />
                 </form>
                 <div>
-                  <button>Continue with Google</button>
-                  <button>Continue with Github</button>
+                  <button onClick={onSocialClick} name="google">Continue with Google</button>
+                  <button onClick={onSocialClick} name="github">Continue with Github</button>
                 </div>
               </div>
             </div>
