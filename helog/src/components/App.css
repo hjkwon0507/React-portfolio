@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap');
 
-body{
+body {
   background-color: #F8F9FA;
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", 나눔고딕, "Nanum Gothic", "Noto Sans KR", "Noto Sans CJK KR", arial, 돋움, Dotum, Tahoma, Geneva, sans-serif;
 }
@@ -21,4 +21,12 @@ a {
 }
 img {
   display: block;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+ol,
+li {
+  list-style: none;
 }

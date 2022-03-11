@@ -17,6 +17,7 @@
 .buttons {
   display: flex;
   align-items: center;
+  position: relative;
 }
 .modeBtn {
   border-radius: 50%;
@@ -24,7 +25,11 @@
   height: 2.5rem;
   margin-right: 0.25rem;
 }
+.modeBtn:hover {
+  background: rgba(0,0,0,0.05);
+}
 .modeIcon {
+  color: #212529;
   width: 24px;
   height: 24px;
 }
@@ -35,6 +40,9 @@
   border-radius: 50%;
   margin-right: 0.5rem;
   color: #212529;
+}
+.searchBtn:hover {
+  background: rgba(0,0,0,0.05);
 }
 .searchIcon {
   width: 1.125rem;
@@ -64,10 +72,17 @@
   color: #212529;
   transition: all 0.125s ease-in 0s;
 }
+.createBtn:hover {
+  background: #212529;
+  color: #FFFFFF;
+}
 .profileBox{
   display: flex;
   cursor: pointer;
   align-items: center;
+}
+.profileBox:hover .down {
+  color: #212529;
 }
 .profile {
   height: 2.5rem;
@@ -78,10 +93,34 @@
   transition: all 0.125s ease-in 0s;
 }
 .down {
-  width: 1em;
-  height: 1em;
+  font-size: 1.5rem;
   margin-left: 0.25rem;
   color: #868E96;
   transition: all 0.125s ease-in 0s;
   margin-right: -0.4375rem;
+}
+.profileMenu {
+  position: absolute;
+  top: 100%;
+  margin-top: 1rem;
+  right: 0px;
+}
+.menuWrapper {
+  position: relative;
+  z-index: 5;
+  width: 12rem;
+  background: #FFFFFF;
+  box-shadow: rgb(0 0 0 / 10%) 0px 0px 8px;
+}
+.menuWrapper li:hover a {
+  background: #F8F9FA;
+  color: #12B886;
+}
+.menuWrapper li a {
+  color: #212529;
+  padding: 0.75rem 1rem;
+  line-height: 1.5;
+  font-weight: 500;
+  cursor: pointer;
+  justify-content: initial;
 }

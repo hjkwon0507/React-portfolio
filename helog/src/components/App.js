@@ -12,6 +12,7 @@ import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(authService.currentUser);
+  const [onMode, setOnMode] = useState(false);
 
   useEffect(() => {
     const auth = getAuth();
@@ -27,7 +28,11 @@ function App() {
   }, []);
   
   return (
-    <Layout isLoggedIn={isLoggedIn}>
+    <Layout
+      isLoggedIn={isLoggedIn}
+      onMode={onMode}
+      setOnMode={setOnMode}
+    >
       <Route exact path="/" component={Home}></Route>
       <Route path="/search" component={Search}></Route>
       <Route path="/setting" component={Profile}></Route>
