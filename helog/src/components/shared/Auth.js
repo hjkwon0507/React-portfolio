@@ -14,7 +14,7 @@ import {
 function Auth({modal, setModal}){
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [newAccount, setNewAccount] = useState(true);
+  const [newAccount, setNewAccount] = useState(false);
   const [error, setError] = useState("");
 
   
@@ -109,6 +109,7 @@ function Auth({modal, setModal}){
                   <button onClick={onSocialClick} name="google">Continue with Google</button>
                   <button onClick={onSocialClick} name="github">Continue with Github</button>
                 </div>
+                <a onClick={()=>{setNewAccount(!newAccount);}}>{newAccount ? "로그인" : "회원가입"}</a>
               </div>
             </div>
           </div>
